@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   changeInput(e: any): void {
-    super.setState({
+    this.setState({
       value: e.target.value,
     });
   }
@@ -25,7 +25,7 @@ class App extends Component {
   addName(): void {
     const { names, value } = this.state;
 
-    super.setState({
+    this.setState({
       names: [...names, value],
       value: '',
     });
