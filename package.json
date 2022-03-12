@@ -1,0 +1,16 @@
+{
+  "name": "VanillaJsToReact",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "https://github.com/ssi02014/VanillaJsToReact.git",
+  "author": "Gromit <ssi02014@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc -p ."
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
