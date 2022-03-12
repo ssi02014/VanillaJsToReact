@@ -9,6 +9,7 @@ export abstract class Component {
   constructor(props: any, target: HTMLElement) {
     this.props = props;
     this.target = target;
+    this.state = {};
   }
 
   setState(newState: any) {
