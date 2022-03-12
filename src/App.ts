@@ -31,7 +31,7 @@ class App extends Component {
     });
   }
 
-  BindEvent(): void {
+  bindEvent(): void {
     const button = qs('button', this.container);
     const input = qs('input', this.container);
 
@@ -55,7 +55,7 @@ class App extends Component {
 
   render(): HTMLElement {
     this.container.innerHTML = this.template();
-    this.BindEvent();
+    this.bindEvent();
     return this.container;
   }
 }

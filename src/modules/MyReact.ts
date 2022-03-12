@@ -21,7 +21,7 @@ export abstract class Component {
 
   abstract render(): HTMLElement;
   abstract template(): string;
-  abstract BindEvent(): void;
+  abstract bindEvent(): void;
 }
 
 export const renderComponent = (
