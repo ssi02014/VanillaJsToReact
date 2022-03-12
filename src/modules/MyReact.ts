@@ -3,8 +3,8 @@ import { IComponent } from '../interfaces/MyReact';
 export abstract class Component {
   abstract container: HTMLElement;
   target: HTMLElement;
+  state: Object;
   props: any;
-  state: any;
 
   constructor(props: any, target: HTMLElement) {
     this.props = props;
