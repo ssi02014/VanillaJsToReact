@@ -1,33 +1,34 @@
+import { IComponent } from '../interfaces/MyReact';
+
 export abstract class Component {
+  abstract container: HTMLElement;
+  target: HTMLElement;
   props: any;
   state: any;
 
-  constructor(props: Object) {
+  constructor(props: any, target: HTMLElement) {
     this.props = props;
-    this.state = {};
+    this.target = target;
   }
 
-  setState(state: Object) {
+  setState(newState: any) {
     this.state = {
       ...this.state,
-      ...state,
+      ...newState,
     };
     this.render();
   }
 
-  qs(selector: string, scope: Document | HTMLElement = document) {
-    if (!selector) throw 'no selector';
-    return scope.querySelector(selector);
-  }
-
-  abstract render(): void;
+  abstract render(): HTMLElement;
+  abstract template(): string;
+  abstract BindEvent(): void;
 }
 
 export const renderComponent = (
-  Component: any,
-  props: Object | null,
-  container: HTMLElement,
+  Component: IComponent,
+  props: any,
+  target: HTMLElement,
 ) => {
-  const component = new Component(props);
-  container.appendChild(component.render());
+  const component = new Component(props, target);
+  target.appendChild(component.render());
 };
