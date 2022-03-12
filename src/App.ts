@@ -43,7 +43,7 @@ class App extends Component {
     const { names, value } = this.state;
 
     return `
-      <h1>바닐라 자바스크립트 To 리액트</h1>
+      <h1>라이브러리 없이 리액트 기능 구현하기(with.타입스크립트)</h1>
       <h2>
         Hello 
         ${names.map((name: string) => name).join(' ')}
